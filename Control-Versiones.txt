@@ -1,0 +1,288 @@
+CONCEPTOS
+
+Directorio:
+Un directorio es una carpeta que se utiliza para organizar 
+y almacenar archivos. Los directorios pueden contener archivos
+y subdirectorios,lo que permite una estructura jerárquica de 
+organización de archivos en un sistema de archivos.
+
+Repositorio:
+Un repositorio es un concepto en el contexto de control de versiones. 
+Es un lugar centralizado donde se almacenan y gestionan los archivos 
+de un proyecto, junto con toda la información sobre su historial de cambios.
+
+En Git, por ejemplo, un repositorio Git es un almacén de datos que 
+contiene todos los archivos del proyecto, así como la información sobre 
+quién hizo cambios, cuándo se hicieron y los propios cambios. Esta información
+se almacena en una estructura de datos especial que permite llevar un seguimiento
+del historial de versiones y colaborar con otros desarrolladores.
+
+Los repositorios pueden ser locales, es decir, en tu propio sistema, o remotos, 
+alojados en servicios como GitHub, GitLab o Bitbucket, donde varios desarrolladores
+pueden colaborar en un proyecto de forma distribuida.
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+COMANDOS PARA EL CONTROL DE VERSIONES
+
+CREAR UN REPOSITORIO
+
+1. C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git init
+
+El comando "git init" se utiliza para inicializar un nuevo repositorio 
+de Git en un directorio específico. En tu caso, estás ejecutando "git init" 
+en el directorio "C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app". 
+La función de este comando es crear un nuevo repositorio de Git vacío en ese 
+directorio, lo que significa que Git comenzará a rastrear los cambios en los
+archivos de ese directorio y permitirá que realices un seguimiento del historial
+de versiones de tu proyecto.
+
+Una vez que hayas ejecutado "git init" en un directorio, se crearán subdirectorios
+ocultos dentro de ese directorio que almacenan la información de control de versiones, 
+como la base de datos de objetos de Git y el registro de confirmaciones. A partir de 
+ese momento, puedes utilizar comandos Git para realizar un seguimiento 
+de los cambios, realizar confirmaciones, crear ramas y llevar un registro completo
+de la historia de tu proyecto en ese repositorio Git.
+
+
+2. C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git add .
+
+git add . : Este comando se utiliza para agregar (o "stagiar") todos los cambios no 
+registrados en el área de preparación (staging area) de Git. El punto (".") se refiere 
+a todo el contenido del directorio actual y sus subdirectorios. Al ejecutar este comando, 
+estás indicando a Git que deseas incluir todos los cambios realizados en los archivos de 
+tu proyecto en el próximo commit. Esto prepara los cambios para ser registrados en
+el historial de versiones de Git.
+
+
+3. C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git commit -m "first commit"
+
+git commit -m "mensaje": Una vez que has utilizado "git add" para preparar 
+tus cambios, el comando "git commit" se utiliza para crear una nueva 
+confirmación (commit) en el historial de versiones de Git. La opción "-m"
+se utiliza para incluir un mensaje que describe de manera concisa los cambios
+realizados en este commit. El mensaje es importante porque permite a los
+colaboradores entender de manera rápida y clara qué cambios se han realizado
+en esta confirmación. Por ejemplo, el mensaje podría describir una nueva característica
+agregada o un error corregido.
+
+4. Iniciamos sesion en github. 
+5. Nos dirigimos donde dice,nuevo repositorio.
+6. Nos aparecera una ventana, para crear el nombre del repositorio.
+Lo escribimos como :  "project-vite" u otro nombre
+
+7. Ingresamos la descripcion.Colocamos los que nosotros queramos.
+8. Escogemos la opcion publico.
+9. Hacemos click en crear repositorio.
+
+10. Una vez creado el repositorio, nos aparecera los siguientes comandos.
+
+* Crear un nuevo repositorio en la linea de comando.
+
+echo "# project-vite" >> README.md
+echo "# project-vite" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/joseluisprogramador/project-vite.git
+git push -u origin main
+
+* Enviar un repositorio existente desde la linea de comando.
+
+git remote add origin https://github.com/joseluisprogramador/project-vite.git
+git branch -M main
+git push -u origin main
+
+Nos dirigimos al directorio del proyecto y colocamos el siguiente comando.
+C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app>git remote add origin https://github.com/joseluisprogramador/project-vite.git
+git branch -M main
+git push -u origin main
+
+11.Actualizamos la pagina de GitHub con "ctrl + r" y debe de aparecer el proyecto subido a GitHub
+
+OTROS COMANDOS DE GIT
+
+4. C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git checkout -- .
+
+El comando "git checkout -- ." se utiliza para descartar los cambios no confirmados 
+en los archivos de tu repositorio Git y restaurarlos a la última versión confirmada
+(el último commit). La notación "--" se usa para indicar que se refiere a archivos
+y no a ramas.
+
+En tu proyecto Vite, si ejecutas el comando "git checkout -- .", lo que sucederá es:
+
+1. Todos los cambios no confirmados en los archivos de tu proyecto (en el directorio actual y
+sus subdirectorios) serán descartados, y los archivos volverán al estado en el que estaban
+en el último commit.
+
+2. Esto significa que cualquier modificación que hayas realizado en los archivos después de 
+la última confirmación se perderá.
+
+3. Ten en cuenta que este comando es irreversible, por lo que debes usarlo 
+con precaución, especialmente si tienes cambios importantes sin confirmar 
+que deseas conservar.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+5 C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git push
+
+El comando git push se utiliza en un proyecto de Vite (o en cualquier proyecto gestionado por Git)
+para enviar tus cambios confirmados localmente al repositorio remoto. En otras palabras, su función
+es cargar tus confirmaciones (commits) en el repositorio remoto, lo que permite compartir 
+tus cambios con otros colaboradores del proyecto o simplemente hacer una copia de seguridad 
+en un servidor remoto.
+
+Cuando ejecutas git push, es importante que estés en una rama (branch) que esté vinculada
+al repositorio remoto. Esto generalmente se hace al configurar un repositorio remoto en
+Git utilizando el comando git remote add. Una vez que tienes una conexión entre tu
+repositorio local y uno o varios repositorios remotos, el git push envía los cambios
+realizados en tu rama local a la rama correspondiente en el repositorio remoto.
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+ELIMINAR UN REPOSITORIO EN GitHub
+
+1. Navega a la ubicación de tu repositorio local en la línea de comandos utilizando
+el comando cd. 
+
+C:\Users\Jose>cd C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app>
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+2. Para eliminar el repositorio local, debes eliminar la carpeta oculta .git.
+Puedes hacerlo con el siguiente comando:
+
+C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app>rd /s /q .git
+
+Este comando eliminará la carpeta .git y, por lo tanto, desconectará tu repositorio
+local de GitHub.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+3
+
+* Ahora, ve a tu cuenta de GitHub en tu navegador web.
+
+* En GitHub, navega al repositorio que deseas eliminar.
+
+* Haz clic en el botón "Settings" (Configuración) en la esquina derecha del repositorio.
+
+* Desplázate hacia abajo hasta la sección "Danger Zone" (Zona de Peligro).
+
+* Haz clic en "Delete this repository" (Eliminar este repositorio).
+
+* Se te pedirá que confirmes la eliminación. Escribe el nombre de tu repositorio 
+y presiona el botón "I understand the consequences, delete this repository" 
+(Entiendo las consecuencias, eliminar este repositorio).
+
+* Una vez que confirmes la eliminación en GitHub, tu repositorio remoto será
+eliminado de GitHub.
+
+Nota : Recuerda que estos pasos eliminarán tanto el repositorio local como el 
+repositorio remoto en GitHub, por lo que asegúrate de tener una copia de
+seguridad de cualquier dato importante antes de proceder.
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git init
+Initialized empty Git repository in C:/Users/Jose/Desktop/Desarrollo React/04-gif-expert-app/.git/
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .eslintrc.cjs
+        .gitignore   
+        Control-Versiones.txt
+        docs/
+        index.html
+        package.json
+        public/
+        src/
+        vite.config.js
+        yarn.lock
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git add .
+warning: in the working copy of '.eslintrc.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-36afc740.css', LF will be replaced by CRLF the next time Git 
+touches it
+warning: in the working copy of 'docs/assets/index-89fb33ab.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it     
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it        
+warning: in the working copy of 'src/main.jsx', LF will be replaced by CRLF the next time Git touches it        
+warning: in the working copy of 'vite.config.js', LF will be replaced by CRLF the next time Git touches it      
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .eslintrc.cjs
+        new file:   .gitignore
+        new file:   Control-Versiones.txt
+        new file:   README.md
+        new file:   docs/assets/index-36afc740.css
+        new file:   docs/assets/index-89fb33ab.js
+        new file:   docs/index.html
+        new file:   docs/vite.svg
+        new file:   index.html
+        new file:   package.json
+        new file:   public/vite.svg
+        new file:   src/GitExpertApp.jsx
+        new file:   src/components/AddCategory.jsx
+        new file:   src/components/GifItem.jsx
+        new file:   src/components/GitGrid.jsx
+        new file:   src/helpers/GetGifs.js
+        new file:   src/main.jsx
+        new file:   src/styles.css
+        new file:   vite.config.js
+        new file:   yarn.lock
+
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git commit -m "first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git commit -m "first commit"
+[master (root-commit) 497a5f3] first commit       
+ 21 files changed, 2827 insertions(+)
+ create mode 100644 .eslintrc.cjs
+ create mode 100644 .gitignore
+ create mode 100644 Control-Versiones.txt
+ create mode 100644 README.md
+ create mode 100644 docs/assets/index-36afc740.css
+ create mode 100644 docs/assets/index-89fb33ab.js 
+ create mode 100644 docs/index.html
+ create mode 100644 docs/vite.svg
+ create mode 100644 index.html
+ create mode 100644 package.json
+ create mode 100644 public/vite.svg
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git remote -v
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> ^C
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git remote add origin https://github.com/joseluisprogramador/project-vite.git
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git branch -M main
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git push -u origin main
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.  
+Delta compression using up to 4 threads
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (29/29), 95.89 KiB | 2.74 MiB/s, done.
+Total 29 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/joseluisprogramador/project-vite.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app>rd /s /q .git
+
