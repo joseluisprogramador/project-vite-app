@@ -77,11 +77,11 @@ export async function GetGifs(category) {
     datos en un nuevo arregloGifs. Se itera sobre cada objeto en data, y se crea un 
     nuevo objeto con propiedades como id, title, y url. Estas propiedades se extraen
     del objeto img` en cada iteración. */
-    const Gifs = data.map(img => ({
+    const Gifs = data?.map(img => ({
         id: img.id,
         title: img.title,
         url: img.images.downsized_medium.url
-    }))
+    })) || []
 
     console.log(Gifs)
     return Gifs

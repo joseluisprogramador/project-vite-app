@@ -25,11 +25,11 @@ export const GitGrid = ({ category }) => {
                 {
                     /*Obtenemos los objetos y extraemos sus propiedades "id","title","url"
                      y las asignamos a las propiedades del componente "GifItem" que son "key","title","url"*/
-                    images.map(images => (
+                    images?.map(image => (
                         <GifItem
-                            key={images.id}
-                            title={images.title}
-                            url={images.url} />
+                            key={image.id}
+                            title={image.title}
+                            url={image.url} />
                     ))
                 }
             </div>
