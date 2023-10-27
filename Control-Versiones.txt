@@ -33,36 +33,11 @@ CREAR UN REPOSITORIO
 
 3. C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git commit -m "first commit"
 
-
-OTROS COMANDOS DE GIT
-
 4. C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git checkout -- .
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 5 C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git push
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////
-
-ELIMINAR UN REPOSITORIO EN GitHub
-
-1. Navega a la ubicación de tu repositorio local en la línea de comandos utilizando
-el comando cd. 
-
-C:\Users\Jose>cd C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app>
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-2. Para eliminar el repositorio local, debes eliminar la carpeta oculta .git.
-Puedes hacerlo con el siguiente comando:
-
-C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app>rd /s /q .git
-
-Este comando eliminará la carpeta .git y, por lo tanto, desconectará tu repositorio
-local de GitHub.
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 OJO : …or create a new repository on the command line
 echo "# project-vite-app" >> README.md
@@ -78,8 +53,6 @@ git branch -M main
 git push -u origin main
 
 //////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 
 PS C:\Users\Jose\Desktop\Desarrollo React\04-gif-expert-app> git init
